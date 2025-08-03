@@ -1,0 +1,63 @@
+# Customer Churn Prediction
+
+This project predicts whether a customer is likely to churn (leave a service) using a Neural Network built with TensorFlow and Keras.
+
+## 📌 Project Overview
+Customer churn is a critical problem for subscription-based services and businesses. By predicting churn, companies can take proactive measures to retain customers.
+
+This model uses customer demographic and service usage features, encodes categorical variables (like gender and geography), rescales values, and applies a neural network for classification.
+
+---
+
+## 📂 Dataset Preprocessing
+1. **Dummy Encoding**
+   - Converted categorical columns (`Gender` and `Geography`) into numerical dummy variables using one-hot encoding.
+
+2. **Feature Scaling**
+   - Applied Standard Scaler to normalize all numeric features for better training stability.
+
+---
+
+## 🏗️ Model Architecture
+The neural network was designed with the following structure:
+
+- **Input Layer**: Accepts 11 input features.  
+- **First Hidden Layer**: 11 neurons with ReLU activation.  
+- **Second Hidden Layer**: 11 neurons with ReLU activation.  
+- **Output Layer**: 1 neuron with sigmoid activation for binary classification (churn or not churn).  
+
+### Parameters
+- **Activation Functions**: ReLU for hidden layers to capture non-linear relationships, Sigmoid for the output layer to output probabilities between 0 and 1.  
+- **Loss Function**: Binary Crossentropy, suitable for binary classification tasks.  
+- **Optimizer**: Adam, chosen for its adaptive learning rate and efficiency.  
+
+---
+
+## 🎯 Training Process
+- The model was trained for **100 epochs**.  
+- **20% of the training data** was used as a validation set to evaluate performance on unseen data.  
+- Both **loss** and **accuracy** were monitored during training and validation.
+
+---
+
+## 📊 Performance Visualization
+To analyze the training process, graphs were plotted:
+
+- **Training Loss vs. Validation Loss**: Used to check if the model was overfitting or underfitting.  
+- **Training Accuracy vs. Validation Accuracy**: Showed how well the model generalized to unseen data.  
+
+These visualizations confirmed the effectiveness of the training process.
+
+---
+
+## ✅ Results
+- The final model achieved an **accuracy of 85.6%** on the test dataset.  
+- This indicates that the neural network effectively predicts customer churn.
+
+---
+
+## 🚀 Future Enhancements
+- Add dropout layers to further reduce overfitting.  
+- Perform hyperparameter tuning (neurons, batch size, learning rate) to boost accuracy.  
+- Experiment with advanced architectures or ensemble methods.  
+- Engineer new features from the dataset to provide more predictive power.  
