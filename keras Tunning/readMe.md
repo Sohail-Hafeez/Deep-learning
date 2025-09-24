@@ -24,7 +24,4 @@ The goal of this project is to:
 - **Validation Monitoring**: Tracks validation accuracy for best model selection.
 - **Best Model Export**: Saves the best-performing model.
 
----
-
-## 📂 Project Structure
 
